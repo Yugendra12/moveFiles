@@ -5,10 +5,15 @@ async function uploadToGit() {
   try {
     await git.init(); // Initialize Git repo
     const fs = require("fs");
+    const path = require("path");
 
     // Specify the file name and contentconst fileName = 'example.txt';
     const content = "Hello, world! This is a new file.";
-    const fileName = "example.txt";
+    const fileName = "homePage.feature";
+
+    // Specify the folder path and file name
+    const folderPath = path.join(__dirname, "features");
+
     // Create the file and write content to it
     fs.writeFile(fileName, content, (err) => {
       if (err) {
