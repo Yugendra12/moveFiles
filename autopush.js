@@ -12,7 +12,7 @@ async function uploadToGit() {
     const fileName = "homePage.feature";
 
     // Specify the folder path and file name
-    const folderPath = path.join(__dirname, "features");
+    const folderPath = path.join(__dirname, "features/*.feature");
 
     // Create the file and write content to it
     fs.writeFile(fileName, content, (err) => {
