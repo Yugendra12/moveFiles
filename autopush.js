@@ -12,7 +12,7 @@ async function uploadToGit() {
     const fileName = "homePage.feature";
 
     // Specify the folder path and file name
-    const folderPath = path.join(__dirname, 'abc');
+    const folderPath = path.join(__dirname, '/Users/ethiraj.haribabu/Desktop/webDardenFramework/features');
     
     // Create the folder if it doesn't exist
     if (!fs.existsSync(folderPath)) {
