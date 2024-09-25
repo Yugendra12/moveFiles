@@ -13,7 +13,6 @@ async function uploadToGit() {
 
     // Specify the folder path and file name
     const folderPath = path.join(__dirname, 'abc');
-    const filePath = path.join(folderPath, fileName);
     
     // Create the folder if it doesn't exist
     if (!fs.existsSync(folderPath)) {
@@ -21,8 +20,8 @@ async function uploadToGit() {
     }
 
     // Create the file and write content to it
+    const filePath = path.join(folderPath, fileName);
     fs.writeFile(fileName, content, (err) => {
-      console.log('file inside');
       if (err) {
         console.error("Error creating file:", err);
       } else {
