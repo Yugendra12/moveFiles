@@ -25,6 +25,7 @@ async function uploadToGit() {
   } catch (error) {
     console.error('Failed to upload code to GitHub:', error);
   }
+  console.log('new line added');
 }
 
 uploadToGit();
