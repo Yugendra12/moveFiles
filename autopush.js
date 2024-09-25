@@ -12,7 +12,7 @@ async function uploadToGit() {
     const fileName = "homePage.feature";
 
     // Specify the folder path and file name
-    const folderPath = path.join(__dirname, '/Users/ethiraj.haribabu/Desktop/webDardenFramework/features');
+    const folderPath = path.join(__dirname, '/Users/ethiraj.haribabu/Desktop/webDardenFramework/features/');
     
     // Create the folder if it doesn't exist
     if (!fs.existsSync(folderPath)) {
@@ -22,7 +22,7 @@ async function uploadToGit() {
     // Create the file and write content to it
     const filePath = path.join(folderPath, fileName);
     console.log('Hello' + filePath);
-    fs.writeFile(fileName, content, (err) => {
+    fs.writeFile(folderPath, content, (err) => {
       if (err) {
         console.error("Error creating file:", err);
       } else {
