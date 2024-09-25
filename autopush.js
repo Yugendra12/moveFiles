@@ -22,7 +22,7 @@ async function uploadToGit() {
     // Create the file and write content to it
     const filePath = path.join(folderPath, fileName);
     console.log('Hello' + filePath);
-    fs.writeFile(fileName, content, (err) => {
+    fs.writeFile(filePath, content, (err) => {
       if (err) {
         console.error("Error creating file:", err);
       } else {
