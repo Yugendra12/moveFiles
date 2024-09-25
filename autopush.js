@@ -18,10 +18,11 @@ async function uploadToGit() {
       } else {
         console.log(`File "${fileName}" created successfully!`);
       }
+      const filePath = path.join('/Users/ethiraj.haribabu/Desktop/webDardenFramework/features', 'homePage.feature');
     });
 
     // Specify the folder path and file name
-    const filePath = path.join('/Users/ethiraj.haribabu/Desktop/webDardenFramework/features', 'homePage.feature');
+    // const filePath = path.join('/Users/ethiraj.haribabu/Desktop/webDardenFramework/features', 'homePage.feature');
 
     await git.add("./*"); // Add all files
     await git.commit("Initial commit"); // Commit changes
