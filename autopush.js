@@ -18,8 +18,10 @@ async function uploadToGit() {
     // Create the folder if it doesn't exist
     if (!fs.existsSync(folderPath)) {
       fs.mkdirSync(folderPath, { recursive: true });
-      // Create the file and write content to it
+
+    // Create the file and write content to it
     fs.writeFile(fileName, content, (err) => {
+      console.log('file inside');
       if (err) {
         console.error("Error creating file:", err);
       } else {
