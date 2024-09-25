@@ -3,7 +3,7 @@ const git = simpleGit();
 
 async function uploadToGit() {
   try {
-    await git.init(); // Initialize Git repo
+    // await git.init(); // Initialize Git repo
     await git.add('./*'); // Add files
     await git.commit('Initial commit'); // Commit changes
     await git.addRemote('origin', 'https://github.com/RoomNo55/WDIO.js.git'); // Add remote origin
