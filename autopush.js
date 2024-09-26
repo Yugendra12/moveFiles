@@ -7,10 +7,10 @@ async function uploadToGit() {
     const path = require("path");
 
     // Path to the local folder and the file you want to read
-    const sourceFolderPath = path.join(__dirname,'source','abc.feature');
+    const sourceFolderPath = path.join(__dirname,'source','.feature');
 
     // Change to your desired destination
-    const destinationFilePath = path.join(__dirname,'features','abc.feature');    
+    const destinationFilePath = path.join(__dirname,'features','.feature');    
 
     // Function to copy the filefunctioncopyFile() {
     function copyFile() {
