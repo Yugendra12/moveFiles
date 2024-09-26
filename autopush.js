@@ -50,10 +50,7 @@ async function moveFiles() {
     const originRemote = remotes.find((remote) => remote.name === "origin");
 
     if (!originRemote) {
-       await git.addRemote(
-        "origin",
-        "https://github.com/Yugendra12/moveFiles.git/"
-      ); // Add remote origin if not set
+       await git.addRemote("origin","https://github.com/Yugendra12/moveFiles.git/"); // Add remote origin if not set
       console.log("Remote origin added.");
     } else {
       console.log("Remote origin already exists, skipping addRemote.");
