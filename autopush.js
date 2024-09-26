@@ -18,8 +18,8 @@ async function moveFiles()
 
     files.forEach((file) => {
       if (file.endsWith(".feature", ".java")) {
-        const sourceFilePath = path.join(sourceDir, file);
-        const destFilePath = path.join(destDir, file);
+        const sourceFilePath = path.join(sourceDir, $(file));
+        const destFilePath = path.join(destDir, $(file));
 
         // Check if the file exists in the destination
         if (!fs.existsSync(destFilePath)) {
