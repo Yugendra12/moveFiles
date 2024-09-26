@@ -1,1 +1,0 @@
-Given working on Photon Company

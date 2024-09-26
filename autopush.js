@@ -1,11 +1,16 @@
+const simpleGit = require("simple-git");
+const git = simpleGit();
+
+
+// Function to move files if they don't exist in the destination
+
 const fs = require('fs');
 const path = require('path');
 
 const sourceDir = './source';  // Source folder path
 const destDir = './features';  // Destination folder path
 
-// Function to move files if they don't exist in the destination
-function moveFiles() {
+async function moveFiles() {
   fs.readdir(sourceDir, (err, files) => {
     if (err) {
       return console.error(`Error reading source directory: ${err.message}`);
@@ -36,7 +41,29 @@ function moveFiles() {
     }
     });
   });
-}
+
+    await git.add("./*"); // Add all files
+    await git.commit("Folder commit"); // Commit changes
+
+    // Check if the remote "origin" already exists
+    const remotes = await git.getRemotes(true); // List all remotes with detailed info
+    const originRemote = remotes.find((remote) => remote.name === "origin");
+
+    if (!originRemote) {
+       await git.addRemote(
+        "origin",
+        "https://github.com/username/repository.git"
+      ); // Add remote origin if not set
+      console.log("Remote origin added.");
+    } else {
+      console.log("Remote origin already exists, skipping addRemote.");
+    }
+
+    // Push to the main branch
+     await git.push("origin", "main");
+    console.log("Code uploaded to GitHub successfully!");
+  
+  console.log("new line added");
+  }
 
 moveFiles();
-1
