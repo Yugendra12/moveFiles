@@ -1,1 +1,1 @@
-Given user login to abc online 
+Hello, world! This is a new file.
