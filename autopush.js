@@ -17,7 +17,7 @@ async function moveFiles()
     }
 
     files.forEach((file) => {
-      if (file.endsWith(".feature")) {
+      if (file.endsWith(".feature", ".java")) {
         const sourceFilePath = path.join(sourceDir, file);
         const destFilePath = path.join(destDir, file);
 
