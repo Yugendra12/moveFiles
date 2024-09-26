@@ -9,19 +9,22 @@ async function uploadToGit() {
 
     // Specify the file name and contentconst fileName = 'example.txt';
     const content = "Hello, world! This is a new file.";
-    const fileName = "homeScreen.feature";
+    const fileName = "abc.feature";
+
+    // Path to the local folder and the file you want to read
+    const localFolderPath = path.join(__dirname, "/Users/ethiraj.haribabu/Desktop/webDardenFramework/source/abc.feature");
 
     // Specify the folder path and file name
-    const folderPath = path.join(__dirname, '/features/');
-    
+    const folderPath = path.join(__dirname, "/features/");
+
     // Create the folder if it doesn't exist
     if (!fs.existsSync(folderPath)) {
       fs.mkdirSync(folderPath, { recursive: true });
     }
 
     // Create the file and write content to it
-    const filePath = path.join(folderPath, fileName);
-    console.log('Hello' + filePath);
+    const filePath = path.join(localFolderPath, fileName);
+    console.log("Hello" + filePath);
     fs.writeFile(filePath, content, (err) => {
       if (err) {
         console.error("Error creating file:", err);
@@ -29,7 +32,6 @@ async function uploadToGit() {
         console.log(`File "${fileName}" created successfully!`);
       }
     });
-    
 
     await git.add("./*"); // Add all files
     await git.commit("Initial commit"); // Commit changes
