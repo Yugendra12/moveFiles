@@ -35,7 +35,7 @@ async function moveFiles()
           console.log(`File already exists in destination: ${file}`);
         }
       } else {
-        console.log(`This is not a Feature file: ${file}`);
+        //console.log(`This is not a Feature file: ${file}`);
       }
     });
   });
@@ -57,9 +57,9 @@ async function moveFiles()
 
   // Push to the main branch
   await git.push("origin", "main");
-  console.log("Code uploaded to GitHub successfully!");
+ // console.log("Code uploaded to GitHub successfully!");
 
-  console.log("new line added");
+  //console.log("new line added");
 }
 
 moveFiles();
