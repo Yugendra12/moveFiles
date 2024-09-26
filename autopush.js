@@ -57,9 +57,7 @@ async function moveFiles()
 
   // Push to the main branch
   await git.push("origin", "main");
-  console.log("Code uploaded to GitHub successfully!");
-
-  console.log("new line added");
+  // console.log("Code uploaded to GitHub successfully!");
 }
 
 moveFiles();
