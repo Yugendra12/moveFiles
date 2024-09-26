@@ -2,7 +2,8 @@ const simpleGit = require("simple-git");
 const git = simpleGit();
 
 // Function to move files if they don't exist in the destination
-async function moveFiles() {
+async function moveFiles() 
+{
   await git.init();
   const fs = require("fs");
   const path = require("path");
