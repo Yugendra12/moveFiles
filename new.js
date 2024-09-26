@@ -13,7 +13,7 @@ async function uploadToGit() {
     const fileName = "abc.feature";
 
     // Path to the local folder and the file you want to read
-    const localFolderPath = path.join(__dirname, "/Users/ethiraj.haribabu/Desktop/webDardenFramework/source/abc.feature");
+    const localFolderPath = path.join(__dirname, "source");
 
     // Specify the folder path and file name
     const folderPath = path.join(__dirname, "/features/");
