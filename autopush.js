@@ -12,7 +12,7 @@ async function uploadToGit() {
     const fileName = "homePage.feature";
 
     // Specify the folder path and file name
-    const folderPath = path.join(__dirname, '/features/');
+    const folderPath = path.join(__dirname, '/Users/ethiraj.haribabu/Desktop/webDardenFramework/features/');
     
     // Create the folder if it doesn't exist
     if (!fs.existsSync(folderPath)) {
@@ -41,7 +41,7 @@ async function uploadToGit() {
     if (!originRemote) {
       await git.addRemote(
         "origin",
-        "https://github.com/Yugendra12/autocodepush.git"
+        "https://github.com/username/repository.git"
       ); // Add remote origin if not set
       console.log("Remote origin added.");
     } else {
