@@ -17,7 +17,7 @@ async function moveFiles()
     }
 
     files.forEach((file) => {
-      if (file.endsWith(".feature")) {
+      if (file.endsWith(".feature") || file.endsWith(".java")) {
         const sourceFilePath = path.join(sourceDir, file);
         const destFilePath = path.join(destDir, file);
 
@@ -41,7 +41,7 @@ async function moveFiles()
   });
 
   await git.add("./*"); // Add all files
-  await git.commit("Initial commit"); // Commit changes
+  await git.commit("automatically pushed to repo"+git.log); // Commit changes
 
   // Check if the remote "origin" already exists
   const remotes = await git.getRemotes(true); // List all remotes with detailed info
