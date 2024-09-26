@@ -3,6 +3,7 @@ const git = simpleGit();
 
 async function uploadToGit() {
 
+  await git.init(); 
     const fs = require("fs");
     const path = require("path");
 
