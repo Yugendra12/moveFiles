@@ -50,9 +50,9 @@ async function moveFiles()
   // to set remote origin git repo
   if (!originRemote) {
     await git.addRemote("origin", "https://github.com/RoomNo55/gitPushJs.git"); // Add remote origin if not set
-    console.log("Remote origin added.");
+    // console.log("Remote origin added.");
   } else {
-    console.log("Remote origin already exists, skipping addRemote.");
+    // console.log("Remote origin already exists, skipping addRemote.");
   }
 
   // Push to the main branch
