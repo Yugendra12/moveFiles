@@ -1,0 +1,1 @@
+Given user launch the application
