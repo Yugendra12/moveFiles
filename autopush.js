@@ -48,12 +48,12 @@ async function moveFiles()
   const originRemote = remotes.find((remote) => remote.name === "origin");
 
   // to set remote origin git repo
-  if (!originRemote) {
-    await git.addRemote("origin", "https://github.com/RoomNo55/WDIO.js.git"); // Add remote origin if not set
-    console.log("Remote origin added.");
-  } else {
-    console.log("Remote origin already exists, skipping addRemote.");
-  }
+  // if (!originRemote) {
+  //   await git.addRemote("origin", "https://github.com/RoomNo55/WDIO.js.git"); // Add remote origin if not set
+  //   console.log("Remote origin added.");
+  // } else {
+  //   console.log("Remote origin already exists, skipping addRemote.");
+  // }
 
   // Push to the main branch
   await git.push("origin", "main");
