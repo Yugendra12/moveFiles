@@ -52,7 +52,7 @@ async function moveFiles() {
     if (!originRemote) {
        await git.addRemote(
         "origin",
-        "https://github.com/username/repository.git"
+        "https://github.com/Yugendra12/moveFiles.git/"
       ); // Add remote origin if not set
       console.log("Remote origin added.");
     } else {
