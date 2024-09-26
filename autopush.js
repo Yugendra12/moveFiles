@@ -34,8 +34,6 @@ async function moveFiles()
         } else {
           console.log(`File already exists in destination: ${file}`);
         }
-      } else {
-        console.log(`This is not a Feature file: ${file}`);
       }
     });
   });
