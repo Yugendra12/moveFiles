@@ -30,6 +30,7 @@ files.forEach((file) => {
     fs.renameSync(sourceFilePath, destFilePath);           // Synchronous file move
     console.log(`Moved: ${file}`);
   } else {
-    console.log(`File already exists in destination: ${file}`);
-  }
+      console.log(`File already exists in destination: ${file}`);
+    }
 });
+
