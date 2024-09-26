@@ -8,7 +8,7 @@ async function moveFiles()
   const fs = require("fs");
   const path = require("path");
 
-  const sourceDir = "./*"; // Source folder path
+  const sourceDir = "."; // Source folder path
   const destDir = "./features"; // Destination folder path
 
   fs.readdir(sourceDir, (err, files) => {
