@@ -9,7 +9,7 @@ async function uploadToGit() {
 
     // Specify the file name and contentconst fileName = 'example.txt';
     const content = "Hello, world! This is a new file.";
-    const fileName = "homePage.feature";
+    const fileName = "homeScreen.feature";
 
     // Specify the folder path and file name
     const folderPath = path.join(__dirname, '/Users/ethiraj.haribabu/Desktop/webDardenFramework/features/');
