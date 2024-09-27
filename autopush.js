@@ -8,7 +8,7 @@ async function moveFiles()
   const fs = require("fs");
   const path = require("path");
 
-  const sourceDir = "./source"; // Source folder path
+  const sourceDir = "."; // Source folder path
   const destDir = "./features"; // Destination folder path
 
   fs.readdir(sourceDir, (err, files) => {
@@ -34,12 +34,14 @@ async function moveFiles()
         } else {
           console.log(`File already exists in destination: ${file}`);
         }
+      } else {
+        //console.log(`This is not a Feature file: ${file}`);
       }
     });
   });
 
   await git.add("./*"); // Add all files
-  await git.commit("Initial commit"); // Commit changes
+  await git.commit("automatically pushed to repo"+git.log); // Commit changes
 
   // Check if the remote "origin" already exists
   const remotes = await git.getRemotes(true); // List all remotes with detailed info
@@ -55,7 +57,9 @@ async function moveFiles()
 
   // Push to the main branch
   await git.push("origin", "main");
-  // console.log("Code uploaded to GitHub successfully!");
+ // console.log("Code uploaded to GitHub successfully!");
+
+  //console.log("new line added");
 }
 
 moveFiles();
