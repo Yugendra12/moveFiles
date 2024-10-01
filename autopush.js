@@ -9,7 +9,7 @@ async function moveFiles()
   const path = require("path");
 
   const sourceDir = "./source"; // Source folder path
-  const destDir = ".//Users/ugandhar.telaganeni/Documents/Learn /Sadik/WSI/CucumberBDD_HybridFramework-main/src/test/resources/features"; // Destination folder path
+  const destDir = "./Users/ugandhar.telaganeni/Documents/Learn /Sadik/WSI/CucumberBDD_HybridFramework-main/src/test/resources/features"; // Destination folder path
 
   fs.readdir(sourceDir, (err, files) => {
     if (err) {
