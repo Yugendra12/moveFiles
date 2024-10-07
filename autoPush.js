@@ -81,9 +81,9 @@ if (!originRemote) {
 const branchName = 'main';
 async function gitProcess() {
 
-    await git.add(['features/*.feature', 'step-definitions/*.java', 'autoPush.js']);
-    await git.commit('Added .feature and .java files to features and step-definitions');
-    await git.stash({ '--include-untracked': null });
+    // await git.add(['features/*.feature', 'step-definitions/*.java', 'autoPush.js']);
+    // await git.commit('Added .feature and .java files to features and step-definitions');
+    // await git.stash({ '--include-untracked': null });
 
     await git.pull('origin', branchName);
  
