@@ -84,7 +84,7 @@ async function gitProcess() {
     await git.add(['features/*.feature', 'step-definitions/*.java', 'autoPush1.js']);
     await git.commit('Added .feature and .java files to features and step-definitions');
     // await git.stash({ '--include-untracked': null });
-   await git.pull('origin', branchName, { '--rebase': 'false' });
+   await git.pull('origin', branchName, { '--rebase': 'true' });
     await git.pull('origin', branchName);
  
     // await git.stash('apply');
