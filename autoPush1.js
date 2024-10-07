@@ -97,18 +97,13 @@ async function gitProcess() {
     // console.log('Files pushed to Git');
 
     function pushChanges(branchName) {
-      exec(`git push -u origin ${branchName}`, (error, stdout, stderr) => {
+      exec(`git push -u origin ${branchName}`, (error, stdout) => {
           if (error) {
               console.error(`Error during push: ${error.message}`);
               return;
-          }
-  
-          if (stderr) {
-              console.error(`Error output: ${stderr}`);
-              return;
-          }
-  
+          }else {
           console.log(`Push successful:\n${stdout}`);
+        }
       });
   } pushChanges(branchName);
 }
