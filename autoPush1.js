@@ -58,7 +58,7 @@ async function checkGitRepo() {
       await git.init();  // Initialize a new Git repository
       console.log('Initialized a new Git repository.');
     } else {
-      console.log('This is a Git repository.');
+      console.log('Git already initiated in this project');
     }
   } catch (error) {
     console.error('Error checking or initializing Git repository:', error);
@@ -79,6 +79,8 @@ if (!originRemote) {
 }
 
 const branchName = 'main';
+
+const { exec } = require('child_process');
 async function gitProcess() {
 
     await git.add(['features/*.feature', 'step-definitions/*.java', 'autoPush1.js']);
@@ -91,8 +93,24 @@ async function gitProcess() {
 
     // await git.stash('pop');
 
-    await git.push(['-u', 'origin', branchName]);
-    console.log('Files pushed to Git');
+    // await git.push(['-u', 'origin', branchName]);
+    // console.log('Files pushed to Git');
+
+    function pushChanges(branchName) {
+      exec(`git push -u origin ${branchName}`, (error, stdout, stderr) => {
+          if (error) {
+              console.error(`Error during push: ${error.message}`);
+              return;
+          }
+  
+          if (stderr) {
+              console.error(`Error output: ${stderr}`);
+              return;
+          }
+  
+          console.log(`Push successful:\n${stdout}`);
+      });
+  } pushChanges(branchName);
 }
 
 await gitProcess();
